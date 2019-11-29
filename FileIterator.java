@@ -3,7 +3,6 @@ import java.util.NoSuchElementException;
 
 public class FileIterator {
     private BufferedReader buf;
-    private static final int MAX_LEN = 1;
 
     public FileIterator(String path) {
         try {
@@ -17,7 +16,7 @@ public class FileIterator {
 
     public boolean hasNext() {
         try {
-            buf.mark(MAX_LEN);
+            buf.mark(1);
             String s = buf.readLine();
             buf.reset();
             return (s != null);
