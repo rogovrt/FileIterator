@@ -36,22 +36,6 @@ public class FileIterator {
         throw new NoSuchElementException();
     }
 
-
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null)
-            return false;
-        if (o instanceof FileIterator) {
-            return (buf.equals(((FileIterator)o).getBuf()));
-        }
-        return false;
-    }
-
-    public int hashCode() {
-        return 31 * 17 + buf.hashCode();
-    }
-
     public BufferedReader getBuf() {
         return buf;
     }
